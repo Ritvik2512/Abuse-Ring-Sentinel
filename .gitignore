@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Notebook checkpoints (if you ever add notebooks)
+.ipynb_checkpoints/
+
+# Model artifacts / large binaries (uncomment if you train to disk)
+*.pt
+*.pth
+
+# Regenerated build artifacts
+results/graph.gpickle
+results/graph.graphml
+
+# Build-process notes (local only)
+handoff docs/

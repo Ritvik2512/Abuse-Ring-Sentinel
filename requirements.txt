@@ -1,0 +1,26 @@
+# Abuse-Ring Sentinel — pinned dependencies  (Python >= 3.10)
+# Exact versions from the working environment. Install into a fresh venv:
+#     python -m venv .venv && .venv\Scripts\activate      (Windows)
+#     pip install -r requirements.txt
+# (The data generator uses numpy only — faker is NOT a dependency.)
+
+# --- data + graph + app ---
+numpy==2.2.6
+pandas==2.3.2
+networkx==3.5            # louvain_communities is built in (no python-louvain needed)
+scikit-learn==1.8.0
+pyvis==0.3.2
+streamlit==1.49.1
+
+# --- GNN ---
+torch==2.8.0
+torch-geometric==2.6.1
+# NOTE: torch-scatter / torch-sparse / torch-cluster / torch-spline-conv are in
+# your env as +pt28cpu builds, but this project imports NONE of them
+# (WeightedSAGEConv uses torch.Tensor.scatter_add_ + PyG's pure-Python
+# MessagePassing). They're left out so `pip install -r requirements.txt` stays
+# clean — those wheels need PyG's dedicated index. Add back only if a future
+# layer requires them.
+
+# --- optional: transaction-only baseline (Day-6 "one sentence"; not installed) ---
+# xgboost            # pin from your env (`pip freeze | grep xgboost`) if you add it
