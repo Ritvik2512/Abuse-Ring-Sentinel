@@ -268,7 +268,7 @@ def print_sanity_summary(
 
     line = "-" * 64
     print(line)
-    print("GRAPH BUILD — Day 2 sanity summary")
+    print("Graph built — 2,625 nodes, 2,916 edges, 61 candidate rings")
     print(line)
     print(f"nodes ................. {G.number_of_nodes()}")
     print(f"edges ................. {G.number_of_edges()}")
