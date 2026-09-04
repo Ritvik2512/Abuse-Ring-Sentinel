@@ -25,3 +25,5 @@ results/graph.graphml
 
 # Build-process notes (local only)
 handoff docs/
+
+results/run_log.txt*
