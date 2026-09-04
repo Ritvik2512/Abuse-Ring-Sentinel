@@ -318,10 +318,8 @@ def run_detector(G, candidate_rings, accounts_df, *, epochs: int = EPOCHS,
 
     train_mask = torch.zeros(len(nodes), dtype=torch.bool, device=device)
     val_mask = torch.zeros_like(train_mask)
-    test_mask = torch.zeros_like(train_mask)
     train_mask[train_i] = True
     val_mask[val_i] = True
-    test_mask[test_i] = True
 
     # balanced class weights -> weighted cross-entropy (imbalance guard)
     cw = compute_class_weight("balanced", classes=np.array([0, 1]),
