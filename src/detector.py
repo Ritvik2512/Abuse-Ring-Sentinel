@@ -1,5 +1,5 @@
 """
-src/detector.py — Abuse-Ring Sentinel · Day 3 detector (GraphSAGE)
+src/detector.py — Abuse-Ring Sentinel
 
 Consumes the graph + candidate rings from graph_build.py, trains a GraphSAGE
 node classifier over standardized account features, aggregates per-account fraud
@@ -17,7 +17,7 @@ Three requirements, wired in from the start (not retrofitted):
      so member scores are aggregated (mean risk, with flagged-fraction reported)
      and rings are ranked.
 
-Public API for Day 4:
+Public API:
     result = run_detector(G, candidate_rings, accounts_df)
     result.account_scores   # {account_id: fraud_probability}
     result.ranked_rings     # list of ring dicts, sorted by risk desc
@@ -293,7 +293,7 @@ class DetectorResult:
 
 
 # --------------------------------------------------------------------------- #
-# Main entry point (Day 4 imports this)
+# Main entry point
 # --------------------------------------------------------------------------- #
 def run_detector(G, candidate_rings, accounts_df, *, epochs: int = EPOCHS,
                  class_weight_power: float = 1.0, device: str | None = None,

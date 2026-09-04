@@ -1,5 +1,5 @@
 """
-Abuse-Ring Sentinel — sample data generator (Day 1)
+Abuse-Ring Sentinel — sample data generator
 
 Produces the believable sample dataset the whole product runs on:
   - accounts.csv          node table (features + fraud label + group provenance)
@@ -30,7 +30,7 @@ from datetime import datetime, timedelta
 import numpy as np
 import pandas as pd
 
-# Fixed reference "now" so signup_timestamp is deterministic across runs/days.
+# Fixed reference "now" so signup_timestamp is deterministic across runs.
 REFERENCE_NOW = datetime(2026, 1, 1, 0, 0, 0)
 
 ATTR_TYPES = ["device", "funding", "ip", "phone"]

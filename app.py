@@ -1,13 +1,13 @@
 """
-Abuse-Ring Sentinel — Day 5 review app
+Abuse-Ring Sentinel — app.py
 ======================================
 A Streamlit + pyvis interface over the *already-computed* detector output.
 
 This app is a DISPLAY LAYER. It does not build the graph, train, tune, or
-re-run the GNN. It loads three things produced by earlier days:
+re-run the GNN. It loads three things:
 
   1. results/<detection results>   (JSON or CSV)  <- source of truth for
-     which rings are flagged and their risk / evidence  (Day 4, detect.py)
+     which rings are flagged and their risk / evidence
   2. data/accounts.csv             <- per-account attributes & role
   3. data/shared_attributes.csv    <- account<->attribute sharing records
 

@@ -1,5 +1,5 @@
 """
-detect.py — Abuse-Ring Sentinel, Day 4 entry point (the safety net).
+detect.py — Abuse-Ring Sentinel
 
 One command: a batch of accounts + shared-attribute records in
              -> ranked flagged fraud rings (risk score + evidence) out.
@@ -28,8 +28,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 try:
-    from src.graph_build import build_graph        # Day 2
-    from src.detector import run_detector          # Day 3
+    from src.graph_build import build_graph        
+    from src.detector import run_detector          
 except ModuleNotFoundError as e:
     sys.exit(
         f"Could not import src modules ({e}).\n"
